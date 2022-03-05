@@ -10,4 +10,11 @@ import javax.persistence.Entity;
 @Data
 @Entity
 public class Currency extends AbsEntity {
+    public Currency(String name, boolean active) {
+        super(name, active);
+    }
+
+    public Currency() {
+
+    }
 }
