@@ -36,4 +36,28 @@ public class MeasurementService {
         Optional<Measurement> optionalMeasurement = measurementRepository.findById(id);
         return optionalMeasurement.orElseGet(Measurement::new);
     }
+
+    // UPDATE
+    public Result editMeasurement(Integer id, Measurement measurement) {
+        Optional<Measurement> optionalMeasurement = measurementRepository.findById(id);
+        if (optionalMeasurement.isPresent()) {
+            Measurement editedMEasurement = optionalMeasurement.get();
+            editedMEasurement.setName(measurement.getName());
+            editedMEasurement.setActive(measurement.isActive());
+
+            measurementRepository.save(editedMEasurement);
+            return new Result("This measurement edited", true);
+        }
+        return new Result("ERORR! This measurement not found", false);
+    }
+
+    // DELETE
+    public Result deleteMeasurement(Integer id) {
+        try {
+            measurementRepository.deleteById(id);
+            return new Result("This measurement deleted", true);
+        } catch (Exception e) {
+            return new Result("This measurement not found", false);
+        }
+    }
 }

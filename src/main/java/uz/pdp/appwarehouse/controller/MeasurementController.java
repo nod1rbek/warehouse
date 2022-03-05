@@ -30,5 +30,13 @@ public class MeasurementController {
         return measurementService.getMeasurementById(id);
     }
 
+    @PutMapping("/{id}")
+    public Result editeMeasurement(@PathVariable Integer id, @RequestBody Measurement measurement) {
+        return measurementService.editMeasurement(id, measurement);
+    }
 
+    @DeleteMapping("/{id}")
+    public Result deleteMeasurement(@PathVariable Integer id) {
+        return measurementService.deleteMeasurement(id);
+    }
 }
