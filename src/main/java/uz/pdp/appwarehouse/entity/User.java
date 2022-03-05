@@ -35,4 +35,14 @@ public class User {
 
     @ManyToMany
     private Set<Warehouse> warehouses;
+
+    public User(String firstName, String lastName, String phoneNumber, String code, String password, boolean active, Set<Warehouse> warehouses) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.code = code;
+        this.password = password;
+        this.active = active;
+        this.warehouses = warehouses;
+    }
 }
