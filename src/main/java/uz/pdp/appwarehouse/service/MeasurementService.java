@@ -51,7 +51,7 @@ public class MeasurementService {
         return new Result("ERORR! This measurement not found", false);
     }
 
-    // DELETE
+    //DELETE
     public Result deleteMeasurement(Integer id) {
         try {
             measurementRepository.deleteById(id);
