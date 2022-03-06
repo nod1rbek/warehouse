@@ -13,9 +13,14 @@ import javax.persistence.ManyToOne;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class Categtory extends AbsEntity {
+@Entity()
+
+public class Category extends AbsEntity {
 
     @ManyToOne
-    private Categtory parentCategory;
+    private Category parentCategory;
+
+    public Category(String name, boolean active) {
+        super(name, active);
+    }
 }
