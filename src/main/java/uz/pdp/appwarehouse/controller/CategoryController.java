@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import uz.pdp.appwarehouse.entity.Category;
 import uz.pdp.appwarehouse.payload.CategoryDto;
 import uz.pdp.appwarehouse.payload.Result;
-import uz.pdp.appwarehouse.repository.CategoryService;
+import uz.pdp.appwarehouse.service.CategoryService;
 
 import java.util.List;
 
