@@ -13,7 +13,4 @@ import javax.persistence.Entity;
 @Entity
 public class Warehouse extends AbsEntity {
 
-    public Warehouse(String name, boolean active) {
-        super(name, active);
-    }
 }

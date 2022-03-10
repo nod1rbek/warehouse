@@ -10,12 +10,4 @@ import javax.persistence.Entity;
 @Data
 @Entity
 public class Measurement extends AbsEntity {
-
-    public Measurement(String name, boolean active) {
-        super(name, active);
-    }
-
-    public Measurement() {
-
-    }
 }

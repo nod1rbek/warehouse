@@ -1,13 +1,12 @@
 package uz.pdp.appwarehouse.entity.template;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @MappedSuperclass
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 
@@ -19,9 +18,4 @@ public abstract class AbsEntity {
     private String name;
 
     private boolean active = true;
-
-    public AbsEntity(String name, boolean active) {
-        this.name = name;
-        this.active = active;
-    }
 }

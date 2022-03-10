@@ -18,7 +18,7 @@ import javax.persistence.OneToOne;
 public class Product extends AbsEntity {
 
     @ManyToOne
-    private Category categtory;
+    private Category category;
 
     @OneToOne
     private Attachment photo;

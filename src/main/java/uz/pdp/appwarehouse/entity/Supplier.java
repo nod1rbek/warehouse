@@ -18,9 +18,4 @@ public class Supplier extends AbsEntity {
 
     @Column(nullable = false, unique = true)
     private String phoneNumber;
-
-    public Supplier(String name, boolean active, String phoneNumber) {
-        super(name, active);
-        this.phoneNumber = phoneNumber;
-    }
 }
